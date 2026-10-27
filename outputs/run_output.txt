@@ -1,0 +1,121 @@
+[info] Online UCI fetch unavailable ("SMS Spam Collection" dataset (id=228) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true). Using local ZIP instead.
+========================================================================
+PROBABILISTIC SMS SPAM DETECTION - Kavin Raj SK (25BCE2866)
+========================================================================
+Dataset source : Local UCI ZIP file: /home/user/BAMAT207_KavinRajSK_25BCE2866/data/sms+spam+collection.zip
+Raw shape      : (5574, 2)
+Missing values in the raw data:
+label      0
+message    0
+
+Cleaned shape  : (5160, 3)  (duplicates removed: 414)
+Duplicates left: 0
+label
+ham     4518
+spam     642
+
+P(Ham)  = 4518/5160 = 0.8755814 (87.56%)
+P(Spam) = 642/5160 = 0.1244186 (12.44%)
+
+Message-length summary by class:
+      char_length                 word_count                
+             mean median min  max       mean median min  max
+label                                                       
+ham         70.86   53.0   2  910      14.23   11.0   1  171
+spam       137.41  148.0  13  223      23.70   25.0   2   35
+
+Word-based probability table (five suspicious words):
+  Word  Messages containing word  Spam messages  Ham messages  P(Word)  P(Word | Spam)  P(Word | Ham)  P(Spam | Word)  P(Ham | Word)  Lift over prior
+  free                       199            144            55 0.038566        0.224299       0.012174        0.723618       0.276382         5.815996
+ prize                        70             70             0 0.013566        0.109034       0.000000        1.000000       0.000000         8.037383
+   win                        53             47             6 0.010271        0.073209       0.001328        0.886792       0.113208         7.127491
+urgent                        61             56             5 0.011822        0.087227       0.001107        0.918033       0.081967         7.378581
+ offer                        30             24             6 0.005814        0.037383       0.001328        0.800000       0.200000         6.429907
+
+Bonus words (my own extension - for contrast):
+ Word  Messages containing word  Spam messages  Ham messages  P(Word)  P(Word | Spam)  P(Word | Ham)  P(Spam | Word)  P(Ham | Word)  Lift over prior
+claim                        91             91             0 0.017636        0.141745       0.000000        1.000000       0.000000         8.037383
+ call                       454            277           177 0.087984        0.431464       0.039177        0.610132       0.389868         4.903866
+ text                       157             92            65 0.030426        0.143302       0.014387        0.585987       0.414013         4.709804
+
+Bayes' theorem verification for the word 'free':
+  P(Free | Spam) = 0.2242991
+  P(Spam)        = 0.1244186
+  P(Free)        = 0.0385659
+  Bayes  P(Spam | Free) = 0.7236181
+  Direct count check    = 144/199 = 0.7236181
+
+Random variable Y (1 = Spam, 0 = Ham):
+  E(Y)   = P(Spam) = 0.1244186
+  Var(Y) = p(1-p)  = 0.1089386
+  NumPy population variance check = 0.1089386
+  SD(Y)  = 0.3300585
+
+Stratified split (random_state=2866): train = 4128, test = 1032
+Vocabulary size (training text only): 7,597
+
+Model performance on the held-out test set:
+  Accuracy         0.988372  (98.84%)
+  Spam precision   0.983333  (98.33%)
+  Spam recall      0.921875  (92.19%)
+  Spam F1-score    0.951613  (95.16%)
+  Ham precision    0.989035  (98.90%)
+  Ham recall       0.997788  (99.78%)
+  Ham F1-score     0.993392  (99.34%)
+
+Confusion matrix [[TN, FP], [FN, TP]] = [[902, 2], [10, 118]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+     Ham (0)     0.9890    0.9978    0.9934       904
+    Spam (1)     0.9833    0.9219    0.9516       128
+
+    accuracy                         0.9884      1032
+   macro avg     0.9862    0.9598    0.9725      1032
+weighted avg     0.9883    0.9884    0.9882      1032
+
+False negatives - spam let through as ham: 10
+                                                                                                                                                     message   P(Ham)      P(Spam)
+   Not heard from U4 a while. Call me now am here all night with just my knickers on. Make me beg for it like U did last time 01223585236 XX Luv Nikiyu4.net 1.000000 4.767778e-11
+                           Ever thought about living a good life with a perfect partner? Just txt back NAME and AGE to join the mobile community. (100p/SMS) 0.871043 1.289574e-01
+LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323. 0.999076 9.236441e-04
+    Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1 0.950971 4.902920e-02
+   Your next amazing xxx PICSFREE1 video will be sent to you enjoy! If one vid is not enough for 2day text back the keyword PICSFREE1 to get the next video. 0.989854 1.014595e-02
+
+False positives - genuine messages flagged as spam: 2
+                                                                                          message   P(Ham)  P(Spam)
+We have sent JD for Customer Service cum Accounts Executive to ur mail id, For details contact us 0.133267 0.866733
+                                                                           Waiting for your call. 0.411531 0.588469
+
+------------------------------------------------------------------------
+REAL-TIME SMS TESTS
+------------------------------------------------------------------------
+
+SMS: Congratulations! You have won a free prize. Claim now.
+Prediction: Spam
+P(Spam | Message) = 0.999999641
+P(Ham | Message)  = 0.000000359
+
+SMS: URGENT! Your account will be blocked. Verify your details now to claim your offer.
+Prediction: Spam
+P(Spam | Message) = 0.999995942
+P(Ham | Message)  = 0.000004058
+
+SMS: Hi, are we still meeting for lunch tomorrow at 1?
+Prediction: Ham (genuine)
+P(Spam | Message) = 0.000001574
+P(Ham | Message)  = 0.999998426
+
+SMS: Your OTP is 482913. Please do not share it with anyone.
+Prediction: Ham (genuine)
+P(Spam | Message) = 0.000203184
+P(Ham | Message)  = 0.999796816
+
+SMS: WINNER! You have been selected for a free holiday. Call now to claim your prize!
+Prediction: Spam
+P(Spam | Message) = 0.999999998
+P(Ham | Message)  = 0.000000002
+
+Artefacts saved under: /home/user/BAMAT207_KavinRajSK_25BCE2866
+  data/cleaned_dataset.csv | figures/*.png | model/*.joblib | outputs/*

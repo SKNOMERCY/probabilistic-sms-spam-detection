@@ -1,0 +1,287 @@
+{
+  "author": "Kavin Raj SK",
+  "registration_number": "25BCE2866",
+  "dataset_source": "Local UCI ZIP file: /home/user/BAMAT207_KavinRajSK_25BCE2866/data/sms+spam+collection.zip",
+  "random_state": 2866,
+  "raw_rows": 5574,
+  "raw_ham": 4827,
+  "raw_spam": 747,
+  "raw_missing_label": 0,
+  "raw_missing_message": 0,
+  "duplicates_removed": 414,
+  "cleaned_rows": 5160,
+  "cleaned_ham": 4518,
+  "cleaned_spam": 642,
+  "p_ham": 0.8755813953488372,
+  "p_spam": 0.12441860465116279,
+  "expectation_Y": 0.12441860465116279,
+  "variance_Y": 0.10893861546782045,
+  "sd_Y": 0.3300585030987998,
+  "word_table": [
+    {
+      "Word": "free",
+      "Messages containing word": 199,
+      "Spam messages": 144,
+      "Ham messages": 55,
+      "P(Word)": 0.038565891472868215,
+      "P(Word | Spam)": 0.22429906542056074,
+      "P(Word | Ham)": 0.01217352810978309,
+      "P(Spam | Word)": 0.7236180904522613,
+      "P(Ham | Word)": 0.27638190954773867,
+      "Lift over prior": 5.815995867186399
+    },
+    {
+      "Word": "prize",
+      "Messages containing word": 70,
+      "Spam messages": 70,
+      "Ham messages": 0,
+      "P(Word)": 0.013565891472868217,
+      "P(Word | Spam)": 0.10903426791277258,
+      "P(Word | Ham)": 0.0,
+      "P(Spam | Word)": 1.0,
+      "P(Ham | Word)": 0.0,
+      "Lift over prior": 8.037383177570094
+    },
+    {
+      "Word": "win",
+      "Messages containing word": 53,
+      "Spam messages": 47,
+      "Ham messages": 6,
+      "P(Word)": 0.010271317829457364,
+      "P(Word | Spam)": 0.07320872274143302,
+      "P(Word | Ham)": 0.0013280212483399733,
+      "P(Spam | Word)": 0.8867924528301887,
+      "P(Ham | Word)": 0.11320754716981132,
+      "Lift over prior": 7.127490742373479
+    },
+    {
+      "Word": "urgent",
+      "Messages containing word": 61,
+      "Spam messages": 56,
+      "Ham messages": 5,
+      "P(Word)": 0.011821705426356589,
+      "P(Word | Spam)": 0.08722741433021806,
+      "P(Word | Ham)": 0.0011066843736166445,
+      "P(Spam | Word)": 0.9180327868852459,
+      "P(Ham | Word)": 0.08196721311475409,
+      "Lift over prior": 7.378581277769266
+    },
+    {
+      "Word": "offer",
+      "Messages containing word": 30,
+      "Spam messages": 24,
+      "Ham messages": 6,
+      "P(Word)": 0.005813953488372093,
+      "P(Word | Spam)": 0.037383177570093455,
+      "P(Word | Ham)": 0.0013280212483399733,
+      "P(Spam | Word)": 0.8,
+      "P(Ham | Word)": 0.2,
+      "Lift over prior": 6.429906542056075
+    }
+  ],
+  "bonus_word_table": [
+    {
+      "Word": "claim",
+      "Messages containing word": 91,
+      "Spam messages": 91,
+      "Ham messages": 0,
+      "P(Word)": 0.017635658914728684,
+      "P(Word | Spam)": 0.14174454828660435,
+      "P(Word | Ham)": 0.0,
+      "P(Spam | Word)": 1.0,
+      "P(Ham | Word)": 0.0,
+      "Lift over prior": 8.037383177570094
+    },
+    {
+      "Word": "call",
+      "Messages containing word": 454,
+      "Spam messages": 277,
+      "Ham messages": 177,
+      "P(Word)": 0.087984496124031,
+      "P(Word | Spam)": 0.43146417445482865,
+      "P(Word | Ham)": 0.039176626826029216,
+      "P(Spam | Word)": 0.6101321585903083,
+      "P(Ham | Word)": 0.3898678414096916,
+      "Lift over prior": 4.903865947548272
+    },
+    {
+      "Word": "text",
+      "Messages containing word": 157,
+      "Spam messages": 92,
+      "Ham messages": 65,
+      "P(Word)": 0.030426356589147288,
+      "P(Word | Spam)": 0.14330218068535824,
+      "P(Word | Ham)": 0.01438689685701638,
+      "P(Spam | Word)": 0.5859872611464968,
+      "P(Ham | Word)": 0.4140127388535032,
+      "Lift over prior": 4.709804155009227
+    }
+  ],
+  "bayes_free": {
+    "p_free_given_spam": 0.22429906542056074,
+    "p_spam": 0.12441860465116279,
+    "p_free": 0.038565891472868215,
+    "p_free_and_spam": 0.027906976744186046,
+    "p_spam_given_free_bayes": 0.7236180904522613,
+    "p_spam_given_free_direct": 0.7236180904522613
+  },
+  "length_summary": {
+    "ham": {
+      "char_mean": 70.85878707392652,
+      "char_median": 53.0,
+      "char_min": 2,
+      "char_max": 910,
+      "word_mean": 14.233289065958388,
+      "word_median": 11.0
+    },
+    "spam": {
+      "char_mean": 137.41433021806853,
+      "char_median": 148.0,
+      "char_min": 13,
+      "char_max": 223,
+      "word_mean": 23.6993769470405,
+      "word_median": 25.0
+    }
+  },
+  "train_size": 4128,
+  "test_size": 1032,
+  "train_ham": 3614,
+  "train_spam": 514,
+  "test_ham": 904,
+  "test_spam": 128,
+  "vocabulary_size": 7597,
+  "metrics": {
+    "Accuracy": 0.9883720930232558,
+    "Spam precision": 0.9833333333333333,
+    "Spam recall": 0.921875,
+    "Spam F1-score": 0.9516129032258065,
+    "Ham precision": 0.9890350877192983,
+    "Ham recall": 0.9977876106194691,
+    "Ham F1-score": 0.9933920704845814
+  },
+  "classification_report": {
+    "Ham (0)": {
+      "precision": 0.9890350877192983,
+      "recall": 0.9977876106194691,
+      "f1-score": 0.9933920704845814,
+      "support": 904.0
+    },
+    "Spam (1)": {
+      "precision": 0.9833333333333333,
+      "recall": 0.921875,
+      "f1-score": 0.9516129032258065,
+      "support": 128.0
+    },
+    "accuracy": 0.9883720930232558,
+    "macro avg": {
+      "precision": 0.9861842105263158,
+      "recall": 0.9598313053097345,
+      "f1-score": 0.9725024868551939,
+      "support": 1032.0
+    },
+    "weighted avg": {
+      "precision": 0.988327893376853,
+      "recall": 0.9883720930232558,
+      "f1-score": 0.9882101582664389,
+      "support": 1032.0
+    }
+  },
+  "confusion_matrix": {
+    "TN": 902,
+    "FP": 2,
+    "FN": 10,
+    "TP": 118
+  },
+  "false_negative_examples": [
+    {
+      "message": "Not heard from U4 a while. Call me now am here all night with just my knickers on. Make me beg for it like U did last time 01223585236 XX Luv Nikiyu4.net",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.9999999999523084,
+      "P(Spam)": 4.767778477826504e-11
+    },
+    {
+      "message": "Ever thought about living a good life with a perfect partner? Just txt back NAME and AGE to join the mobile community. (100p/SMS)",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.871042570008588,
+      "P(Spam)": 0.12895742999141468
+    },
+    {
+      "message": "LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.9990763558938662,
+      "P(Spam)": 0.0009236441061246868
+    },
+    {
+      "message": "Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.9509708016866139,
+      "P(Spam)": 0.049029198313383246
+    },
+    {
+      "message": "Your next amazing xxx PICSFREE1 video will be sent to you enjoy! If one vid is not enough for 2day text back the keyword PICSFREE1 to get the next video.",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.9898540479671468,
+      "P(Spam)": 0.010145952032855789
+    },
+    {
+      "message": "RCT' THNQ Adrian for U text. Rgds Vatian",
+      "actual": 1,
+      "predicted": 0,
+      "P(Ham)": 0.6148678224516873,
+      "P(Spam)": 0.38513217754831236
+    }
+  ],
+  "false_positive_examples": [
+    {
+      "message": "We have sent JD for Customer Service cum Accounts Executive to ur mail id, For details contact us",
+      "actual": 0,
+      "predicted": 1,
+      "P(Ham)": 0.1332674053948574,
+      "P(Spam)": 0.8667325946051468
+    },
+    {
+      "message": "Waiting for your call.",
+      "actual": 0,
+      "predicted": 1,
+      "P(Ham)": 0.411530573086276,
+      "P(Spam)": 0.5884694269137224
+    }
+  ],
+  "demo_results": [
+    {
+      "message": "Congratulations! You have won a free prize. Claim now.",
+      "prediction": "Spam",
+      "P(Spam | Message)": 0.9999996411594343,
+      "P(Ham | Message)": 3.5884056392520676e-07
+    },
+    {
+      "message": "URGENT! Your account will be blocked. Verify your details now to claim your offer.",
+      "prediction": "Spam",
+      "P(Spam | Message)": 0.9999959415148187,
+      "P(Ham | Message)": 4.058485178769855e-06
+    },
+    {
+      "message": "Hi, are we still meeting for lunch tomorrow at 1?",
+      "prediction": "Ham (genuine)",
+      "P(Spam | Message)": 1.5739263593950154e-06,
+      "P(Ham | Message)": 0.9999984260736405
+    },
+    {
+      "message": "Your OTP is 482913. Please do not share it with anyone.",
+      "prediction": "Ham (genuine)",
+      "P(Spam | Message)": 0.00020318375518293077,
+      "P(Ham | Message)": 0.99979681624482
+    },
+    {
+      "message": "WINNER! You have been selected for a free holiday. Call now to claim your prize!",
+      "prediction": "Spam",
+      "P(Spam | Message)": 0.9999999983875227,
+      "P(Ham | Message)": 1.612478650543156e-09
+    }
+  ]
+}

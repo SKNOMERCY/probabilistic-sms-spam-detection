@@ -1,0 +1,19 @@
+Quantity,Value
+Raw messages,5574
+Raw ham,4827
+Raw spam,747
+Missing labels,0
+Missing messages,0
+Duplicate messages removed,414
+Cleaned messages (N),5160
+Cleaned ham (0),4518
+Cleaned spam (1),642
+P(Ham),0.8755814
+P(Spam),0.1244186
+E(Y),0.1244186
+Var(Y),0.1089386
+SD(Y),0.3300585
+Training messages,4128
+Testing messages,1032
+Vocabulary size,7597
+Random state (seed),2866

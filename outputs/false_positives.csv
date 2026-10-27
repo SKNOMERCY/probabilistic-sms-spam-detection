@@ -1,0 +1,3 @@
+,message,actual,predicted,P(Ham),P(Spam)
+1221,"We have sent JD for Customer Service cum Accounts Executive to ur mail id, For details contact us",0,1,0.1332674053948574,0.8667325946051468
+563,Waiting for your call.,0,1,0.411530573086276,0.5884694269137224

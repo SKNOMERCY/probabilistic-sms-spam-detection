@@ -1,0 +1,6 @@
+message,prediction,P(Spam | Message),P(Ham | Message)
+Congratulations! You have won a free prize. Claim now.,Spam,0.9999996411594343,3.5884056392520676e-07
+URGENT! Your account will be blocked. Verify your details now to claim your offer.,Spam,0.9999959415148187,4.058485178769855e-06
+"Hi, are we still meeting for lunch tomorrow at 1?",Ham (genuine),1.5739263593950154e-06,0.9999984260736405
+Your OTP is 482913. Please do not share it with anyone.,Ham (genuine),0.00020318375518293077,0.99979681624482
+WINNER! You have been selected for a free holiday. Call now to claim your prize!,Spam,0.9999999983875227,1.612478650543156e-09

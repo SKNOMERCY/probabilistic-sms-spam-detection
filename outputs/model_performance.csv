@@ -1,0 +1,12 @@
+Metric,Value
+Accuracy,0.9883720
+Spam precision,0.9833330
+Spam recall,0.9218750
+Spam F1-score,0.9516130
+Ham precision,0.9890350
+Ham recall,0.9977880
+Ham F1-score,0.9933920
+True negatives (TN),902
+False positives (FP),2
+False negatives (FN),10
+True positives (TP),118
